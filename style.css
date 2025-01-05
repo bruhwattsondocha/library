@@ -74,4 +74,8 @@ body {
 .main.container {
   grid-column: 2 / 3;
   grid-row: 2;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 15vh;
 }
