@@ -44,6 +44,11 @@ function createItemOnPage(book) {
   const isRead = document.createElement('p');
   isRead.classList.add('book', 'is-read');
   gridRight.appendChild(isRead);
+  const removeBookButton = document.createElement('p');
+  removeBookButton.classList.add('remove-book');
+  removeBookButton.innerText = 'remove book';
+  removeBookButton.style.color = 'red';
+  gridRight.appendChild(removeBookButton);
 
   function fillItem(book) {
     bookTitle.innerText = book.title;
@@ -51,7 +56,16 @@ function createItemOnPage(book) {
     bookPages.innerText = `Pages: ${book.pages}`;
     isRead.innerText = book.isRead;
   }
+
   fillItem(book);
+
+  removeBookButton.addEventListener('click', removeBookFromList);
+  const bookIndex = library.findIndex(item => item.author === book.author); 
+
+  function removeBookFromList() {
+    mainContainer.removeChild(gridItem);
+    library.pop(bookIndex, 1);
+  }
 }
 
 // Create function that loops through all array items and prints them on display
@@ -100,3 +114,5 @@ function addNewBook() {
 function displayLastBook(library) {
   createItemOnPage(library[library.length - 1]);
 }
+
+// let index = library.findIndex(book => (book.author === this.author && book.title === this.title)); 
