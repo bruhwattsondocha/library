@@ -50,7 +50,7 @@ div {
 body {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr 66ch 1.8fr;
+  grid-template-columns: 1fr 60ch 1.8fr;
   grid-template-rows: 8vh 1fr;
 }
 
