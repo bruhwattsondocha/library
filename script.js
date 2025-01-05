@@ -60,3 +60,6 @@ function displayAllBooks(library) {
     createItemOnPage(book);
   });
 }
+
+
+displayAllBooks(library)

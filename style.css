@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Debugging */
 div {
   /* outline: 2px solid pink;  */
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 /* BODY */
@@ -50,8 +50,8 @@ div {
 body {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 1fr 66ch 1.5fr;
-  grid-template-rows: 6vh 1fr;
+  grid-template-columns: 1fr 66ch 1.8fr;
+  grid-template-rows: 8vh 1fr;
 }
 
 /* HEADER */
@@ -75,7 +75,9 @@ body {
   background-color: white;
   border-radius: 50px;
   padding: .5rem 1rem;
+  cursor: pointer;
 }
+
 /* MAIN */
 
 .main.container {
