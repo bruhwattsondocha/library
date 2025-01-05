@@ -94,9 +94,14 @@ body {
 .grid-left {
   display: grid;
   padding: 1rem;
+  gap: 1rem 0;
 }
 .grid-right {
   display: grid;
   align-items: center;
   justify-items: center;
+}
+
+.title-author {
+  /* margin-bottom: 1rem; */
 }
