@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 /*  */
 
 /* Debugging */
-* {
+div {
   outline: 2px solid pink;
   border-radius: 12px;
 }
@@ -51,7 +51,7 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr 66ch 1fr;
-  grid-template-rows: 5vh 1fr;
+  grid-template-rows: 6vh 1fr;
 }
 
 /* HEADER */
@@ -59,8 +59,16 @@ body {
 .header.container {
   background-color: rgb(192, 189, 189);
   grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  justify-items: center;
+  align-items: center;
 }
 
+.header .site-name {
+  font-size: 1.5rem;
+}
 /* MAIN */
 
 .main.container {
