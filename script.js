@@ -75,3 +75,28 @@ function showNewBookForm() {
     newBookFormContainer.style.display = 'none';
   }
 }
+
+const addBookToLibraryButton = document.querySelector('.add-book-to-library-button');
+addBookToLibraryButton.addEventListener('click', addNewBook);
+
+function addNewBook() {
+  let author = document.querySelector('#author');
+  let title = document.querySelector('#title');
+  let pages = document.querySelector('#pages');
+  let isRead = document.querySelector('#isRead');
+
+  addBookToLibrary(new Book(author.value, title.value, pages.value, isRead.value));
+  function clearValues() {
+    author.value = '';
+    title.value = '';
+    pages.value = '';
+    isRead.value = '-';
+  }
+  clearValues();
+  // CLEAR ALL SHIT ALSO AND DISPLAY IT RIGHT AWAY
+  displayLastBook(library);
+}
+
+function displayLastBook(library) {
+  createItemOnPage(library[library.length - 1]);
+}
