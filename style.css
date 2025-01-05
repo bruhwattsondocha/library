@@ -38,3 +38,32 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*  */
+
+/* Debugging */
+* {
+  outline: 2px solid pink;
+  border-radius: 12px;
+}
+
+/* BODY */
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 66ch 1fr;
+  grid-template-rows: 5vh 1fr;
+}
+
+/* HEADER */
+
+.header.container {
+  background-color: rgb(192, 189, 189);
+  grid-column: 1 / -1;
+}
+
+/* MAIN */
+
+.main.container {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
