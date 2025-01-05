@@ -11,9 +11,12 @@ function addBookToLibrary(book) {
   library.push(book);
 }
 
+addBookToLibrary(new Book('Harper Lee', 'To Kill a Mockingbird', 323, 'unread'));
+
+
 const mainContainer = document.querySelector('.main.container');
 
-function createItemOnPage() {
+function createItemOnPage(book) {
   const gridItem = document.createElement('div');
   gridItem.classList.add('grid-item');
   mainContainer.appendChild(gridItem);
@@ -38,4 +41,13 @@ function createItemOnPage() {
   const isRead = document.createElement('p');
   isRead.classList.add('book', 'is-read');
   gridRight.appendChild(isRead);
+
+  function fillItem(book) {
+    bookTitle.innerText = book.title;
+    bookAuthor.innerText = book.author;
+    bookPages.innerText = book.pages;
+    isRead.innerText = book.isRead;
+  }
+  fillItem(book);
 }
+
