@@ -61,7 +61,7 @@ body {
   grid-column: 1 / -1;
 
   display: grid;
-  grid-template-columns: 1fr 6fr;
+  grid-template-columns: 1fr 6fr 1fr;
   justify-items: center;
   align-items: center;
 }
@@ -70,6 +70,12 @@ body {
   font-size: 1.5rem;
 }
 
+.header.add-button {
+  grid-column: 3;
+  background-color: white;
+  border-radius: 50px;
+  padding: .5rem 1rem;
+}
 /* MAIN */
 
 .main.container {
