@@ -41,8 +41,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Debugging */
 div {
-  /* outline: 2px solid pink;  */
-  /* border-radius: 12px; */
+  outline: 2px solid pink; 
+  border-radius: 12px;
 }
 
 /* BODY */
@@ -52,6 +52,8 @@ body {
   min-height: 100vh;
   grid-template-columns: 1fr 60ch 1.8fr;
   grid-template-rows: 8vh 1fr;
+
+  position: relative;
 }
 
 /* HEADER */
@@ -111,6 +113,20 @@ body {
   justify-items: center;
 }
 
-.title-author {
-  /* margin-bottom: 1rem; */
+/* FORM CONTAINER */
+
+.form.container {
+  grid-column: 3;
+  background-color: #efefef;
+  width: 30%;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  /* display: none; */
+}
+
+.book-form {
+  display: grid;
+  padding: 1rem;
+  gap: 1rem;
 }
