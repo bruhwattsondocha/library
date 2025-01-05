@@ -63,3 +63,15 @@ function displayAllBooks(library) {
 
 
 displayAllBooks(library)
+
+const addNewBookButton = document.querySelector('.add-button');
+const newBookFormContainer = document.querySelector('.form.container');
+addNewBookButton.addEventListener('click', showNewBookForm);
+
+function showNewBookForm() {
+  if (newBookFormContainer.style.display === '' || newBookFormContainer.style.display === 'none') {
+    newBookFormContainer.style.display = 'block';
+  } else {
+    newBookFormContainer.style.display = 'none';
+  }
+}
