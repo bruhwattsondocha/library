@@ -41,8 +41,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Debugging */
 div {
-  outline: 2px solid pink; 
-  border-radius: 12px;
+  /* outline: 2px solid pink;  */
+  /* border-radius: 12px; */
 }
 
 /* BODY */
@@ -122,11 +122,31 @@ body {
   position: fixed;
   top: 5rem;
   right: 0;
-  display: none;
+  /* display: none; */
 }
 
 .book-form {
   display: grid;
   padding: 1rem;
   gap: 1rem;
+}
+
+.book-form > input {
+  border-radius: 6px;
+  padding: 0 .5rem;
+}
+
+.book-form > input:user-valid {
+  border-color: rgb(25, 176, 25);
+}
+
+.book-form > button {
+  background-color: rgb(54, 153, 230);
+  color: white;
+  border: none;
+  border-radius: 24px;
+  max-width: fit-content;
+  padding: .5rem 2rem;
+  justify-self: center;
+  cursor: pointer;
 }
