@@ -69,6 +69,7 @@ body {
 .header .site-name {
   font-size: 1.5rem;
 }
+
 /* MAIN */
 
 .main.container {
@@ -77,5 +78,22 @@ body {
 
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: 15vh;
+  grid-auto-rows: 10vh;
+}
+
+/* GRID ITEMS */
+
+.grid-item {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.grid-left {
+  display: grid;
+
+}
+.grid-right {
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
