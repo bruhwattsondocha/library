@@ -47,8 +47,8 @@ function createItemOnPage(book) {
 
   function fillItem(book) {
     bookTitle.innerText = book.title;
-    bookAuthor.innerText = book.author;
-    bookPages.innerText = book.pages;
+    bookAuthor.innerText = `by ${book.author}`;
+    bookPages.innerText = `Pages: ${book.pages}`;
     isRead.innerText = book.isRead;
   }
   fillItem(book);
