@@ -12,6 +12,9 @@ function addBookToLibrary(book) {
 }
 
 addBookToLibrary(new Book('Harper Lee', 'To Kill a Mockingbird', 323, 'unread'));
+addBookToLibrary(new Book('Jim Carry', 'Suck a Mockingbird', 33, 'unread'));
+addBookToLibrary(new Book('Ktoto', 'Mir i mir', 500, 'unread'));
+addBookToLibrary(new Book('Quok', 'Ptitsa', 10000, 'unread'));
 
 
 const mainContainer = document.querySelector('.main.container');
@@ -51,3 +54,9 @@ function createItemOnPage(book) {
   fillItem(book);
 }
 
+// Create function that loops through all array items and prints them on display
+function displayAllBooks(library) {
+  library.forEach(book => {
+    createItemOnPage(book);
+  });
+}
