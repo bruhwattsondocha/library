@@ -113,6 +113,10 @@ body {
   justify-items: center;
 }
 
+.is-read,
+.remove-book {
+  cursor: pointer;
+}
 /* FORM CONTAINER */
 
 .form.container {
@@ -150,3 +154,4 @@ body {
   justify-self: center;
   cursor: pointer;
 }
+

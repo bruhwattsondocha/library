@@ -112,7 +112,6 @@ function addNewBook() {
     isRead.value = '-';
   }
   clearValues();
-  // CLEAR ALL SHIT ALSO AND DISPLAY IT RIGHT AWAY
   displayLastBook(library);
 }
 
@@ -120,4 +119,3 @@ function displayLastBook(library) {
   createItemOnPage(library[library.length - 1]);
 }
 
-// let index = library.findIndex(book => (book.author === this.author && book.title === this.title)); 
