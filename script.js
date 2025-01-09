@@ -63,11 +63,11 @@ function createItemOnPage(book) {
     bookTitle.innerText = book.title;
     bookAuthor.innerText = `by ${book.author}`;
     bookPages.innerText = `Pages: ${book.pages}`;
-    isRead.innerText = book.isRead;
+    isRead.innerText = `Status: ${book.isRead}`;
   }
   
   function changeReadStatusOnPage() {
-    isRead.innerText = book.isRead;
+    isRead.innerText = `Status: ${book.isRead}`;
   }
   fillItem(book);
 
