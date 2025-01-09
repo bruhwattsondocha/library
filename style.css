@@ -131,6 +131,14 @@ body {
 .remove-book {
   cursor: pointer;
 }
+
+.is-read {
+  text-decoration: underline 2px black;
+}
+
+.is-read:hover {
+  text-decoration: none;
+}
 /* FORM CONTAINER */
 
 .form.container {
