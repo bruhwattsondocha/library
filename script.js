@@ -5,6 +5,7 @@ function Book(author, title, pages, isRead) {
   this.title = title;
   this.pages = pages;
   this.isRead = isRead;
+  this.index = library.length;
 }
 
 function addBookToLibrary(book) {
