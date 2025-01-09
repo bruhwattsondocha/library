@@ -8,6 +8,14 @@ function Book(author, title, pages, isRead) {
   this.index = library.length;
 }
 
+function changeReadStatus() {
+  if (this.isRead === 'read') {
+    this.isRead = 'not read'
+  } else if (this.isRead === 'unread') {
+    this.isRead = 'read';
+  }
+}
+
 function addBookToLibrary(book) {
   library.push(book);
 }
@@ -61,6 +69,7 @@ function createItemOnPage(book) {
   fillItem(book);
 
   removeBookButton.addEventListener('click', removeBookFromList);
+  isRead.addEventListener('click', changeReadStatus.bind(book));
 
   function removeBookFromList() {
     mainContainer.removeChild(gridItem);
