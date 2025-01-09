@@ -61,11 +61,15 @@ function createItemOnPage(book) {
   fillItem(book);
 
   removeBookButton.addEventListener('click', removeBookFromList);
-  const bookIndex = library.findIndex(item => item.author === book.author); 
 
   function removeBookFromList() {
     mainContainer.removeChild(gridItem);
-    library.pop(bookIndex, 1);
+    library.splice(book.index, 1);
+    library.forEach(item => {
+      if (item.index > book.index) {
+        item.index = item.index - 1; 
+      }
+    });
   }
 }
 
