@@ -110,9 +110,12 @@ body {
 .grid-right {
   display: grid;
   align-items: center;
-  justify-items: center;
+  justify-items: start;
 }
 
+.remove-book {
+  justify-self: center;
+}
 .is-read,
 .remove-book {
   cursor: pointer;
