@@ -65,12 +65,15 @@ function createItemOnPage(book) {
     bookPages.innerText = `Pages: ${book.pages}`;
     isRead.innerText = book.isRead;
   }
-
+  
+  function changeReadStatusOnPage() {
+    isRead.innerText = book.isRead;
+  }
   fillItem(book);
 
   removeBookButton.addEventListener('click', removeBookFromList);
   isRead.addEventListener('click', changeReadStatus.bind(book));
-  isRead.addEventListener('click', fillItem(book));
+  isRead.addEventListener('click', changeReadStatusOnPage);
 
   function removeBookFromList() {
     mainContainer.removeChild(gridItem);
@@ -91,7 +94,7 @@ function displayAllBooks(library) {
 }
 
 
-displayAllBooks(library)
+displayAllBooks(library);
 
 const addNewBookButton = document.querySelector('.add-button');
 const newBookFormContainer = document.querySelector('.form.container');
