@@ -10,7 +10,7 @@ function Book(author, title, pages, isRead) {
 
 function changeReadStatus() {
   if (this.isRead === 'read') {
-    this.isRead = 'not read'
+    this.isRead = 'unread'
   } else if (this.isRead === 'unread') {
     this.isRead = 'read';
   }
@@ -70,6 +70,7 @@ function createItemOnPage(book) {
 
   removeBookButton.addEventListener('click', removeBookFromList);
   isRead.addEventListener('click', changeReadStatus.bind(book));
+  isRead.addEventListener('click', fillItem(book));
 
   function removeBookFromList() {
     mainContainer.removeChild(gridItem);
