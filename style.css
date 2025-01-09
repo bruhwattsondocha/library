@@ -114,7 +114,18 @@ body {
 }
 
 .remove-book {
-  justify-self: center;
+  --background-size: 2em;
+  justify-self: end;
+  margin-right: 1rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  text-align: center;
+  height: var(--background-size);
+  width: var(--background-size);
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 .is-read,
 .remove-book {

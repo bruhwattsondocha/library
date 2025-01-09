@@ -55,8 +55,7 @@ function createItemOnPage(book) {
   gridRight.appendChild(isRead);
   const removeBookButton = document.createElement('p');
   removeBookButton.classList.add('remove-book');
-  removeBookButton.innerText = 'remove book';
-  removeBookButton.style.color = 'red';
+  removeBookButton.innerText = '❌';
   gridRight.appendChild(removeBookButton);
 
   function fillItem(book) {
