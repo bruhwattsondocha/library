@@ -176,6 +176,10 @@ body {
   border-color: rgb(25, 176, 25);
 }
 
+.book-form > input:user-invalid {
+  border-color: red;
+}
+
 .book-form > button {
   background-color: rgb(54, 153, 230);
   color: white;

@@ -115,7 +115,9 @@ function addNewBook() {
   let title = document.querySelector('#title');
   let pages = document.querySelector('#pages');
   let isRead = document.querySelector('#isRead');
-
+  const isEmpty = '' || '-';
+  
+  if (author.value === isEmpty || title.value === isEmpty || pages.value === isEmpty || isRead.value === isEmpty) return 1;
   addBookToLibrary(new Book(author.value, title.value, pages.value, isRead.value));
   function clearValues() {
     author.value = '';
