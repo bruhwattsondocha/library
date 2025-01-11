@@ -46,6 +46,10 @@ div {
 }
 
 /* BODY */
+:root {
+  --accent-color: #93c5fd;
+  --accent-color-light: #bfdbfe;
+}
 
 body {
   display: grid;
@@ -59,7 +63,7 @@ body {
 /* HEADER */
 
 .header.container {
-  background-color: rgb(192, 189, 189);
+  background-color: var(--accent-color);
   grid-column: 1 / -1;
 
   display: grid;
@@ -98,8 +102,10 @@ body {
 .grid-item {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  background-color: lightgray;
+  border-bottom: 2px solid var(--accent-color);
+  background-color: var(--accent-color-light);
   border-radius: 12px;
+  box-shadow: 2px 2px 2px pink;
 }
 
 .grid-left {
@@ -144,9 +150,11 @@ body {
 .form.container {
   grid-column: 3;
   background-color: #efefef;
+  background-color: var(--accent-color-light);
+  border-radius: 0 0 0 15px ;
   width: 30%;
   position: fixed;
-  top: 5rem;
+  top: 4rem;
   right: 0;
   display: none;
 }
