@@ -1,29 +1,23 @@
 const library = [];
 
-function Book(author, title, pages, isRead) {
+class Book {
+  constructor(author, title, pages, isRead) {
   this.author = author;
   this.title = title;
   this.pages = pages;
   this.isRead = isRead;
   this.index = library.length;
-}
-
-function changeReadStatus() {
-  if (this.isRead === 'read') {
-    this.isRead = 'unread'
-  } else if (this.isRead === 'unread') {
-    this.isRead = 'read';
   }
+
+  static addBookToLibrary = (book) => library.push(book);
+
+  changeReadStatus = () => this.isRead = this.isRead === 'read' ? 'unread' : 'read';
 }
 
-function addBookToLibrary(book) {
-  library.push(book);
-}
-
-addBookToLibrary(new Book('Harper Lee', 'To Kill a Mockingbird', 323, 'unread'));
-addBookToLibrary(new Book('Jim Carry', 'Suck a Mockingbird', 33, 'unread'));
-addBookToLibrary(new Book('Ktoto', 'Mir i mir', 500, 'unread'));
-addBookToLibrary(new Book('Quok', 'Ptitsa', 10000, 'unread'));
+Book.addBookToLibrary(new Book('Harper Lee', 'To Kill a Mockingbird', 323, 'unread'));
+Book.addBookToLibrary(new Book('Jim Carry', 'Suck a Mockingbird', 33, 'unread'));
+Book.addBookToLibrary(new Book('Ktoto', 'Mir i mir', 500, 'unread'));
+Book.addBookToLibrary(new Book('Quok', 'Ptitsa', 10000, 'unread'));
 
 
 const mainContainer = document.querySelector('.main.container');
@@ -71,7 +65,7 @@ function createItemOnPage(book) {
   fillItem(book);
 
   removeBookButton.addEventListener('click', removeBookFromList);
-  isRead.addEventListener('click', changeReadStatus.bind(book));
+  isRead.addEventListener('click', book.changeReadStatus);
   isRead.addEventListener('click', changeReadStatusOnPage);
 
   function removeBookFromList() {
